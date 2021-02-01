@@ -1,32 +1,6 @@
 /*Верхняя линия*/
-@mixin flexCenter($type){
-    display: $type;
-    align-items: center;
-    justify-content: center;
-}
-@mixin fonts ($type){
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: $type;  }
-@mixin transform {
-        transition-property: background-color,fill, border-color;
-        transition-duration: 250ms;
-        transition-timing-function: linear;
 
-     }    
-@mixin transformSocial {
-    transition-property: background-color,fill ;
-    transition-duration: 250ms;
-    transition-timing-function: linear;
-}    
-$ghost-color: #EEEEEE;
-$accent-link:#AFB1B8;
-$my-accent:#F5F4FA;
-$back-color: #2F303A;
-$text-color: #757575;
-$accent-text:#212121;
-$my-color:#ffffff;
-$accent-color: #2196F3;
+
 header{
     background-color: $my-color; }
 .header-logo {

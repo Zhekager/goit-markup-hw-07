@@ -1,11 +1,12 @@
  @import "./utils/variables" ;
+ @import "./utils/mixins";
  @import "./layout/HeaderLine";
  @import "./components/form";
- @import "./utils/helmet";
- @import "./utils/features";
- @import "./utils/WhatAreWeDoing";
- @import "./utils/ourTeam";
+ @import "./layout/helmet";
+ @import "./layout/features";
+ @import "./layout/WhatAreWeDoing";
+ @import "./layout/ourTeam";
  @import "./components/button";
- @import "./utils/client";
+ @import "./layout/client";
  @import "./layout/footer";
- @import "./utils/portfolio";
+ @import "./layout/portfolio";
