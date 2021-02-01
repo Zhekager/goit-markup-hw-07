@@ -1,0 +1,72 @@
+
+
+@mixin flexCenter($type){
+    display: $type;
+    align-items: center;
+    justify-content: center;   
+}
+@mixin transform {
+   transition-property: background-color,fill, border-color;
+   transition-duration: 250ms;
+   transition-timing-function: linear;
+}
+@mixin fonts ($type){
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: $type;
+  
+}
+@mixin transformSocial {
+   transition-property: background-color,fill ;
+   transition-duration: 250ms;
+   transition-timing-function: linear;
+}
+$ghost-color: #EEEEEE;
+$accent-link:#AFB1B8;
+$my-accent:#F5F4FA;
+$back-color: #2F303A;
+$text-color: #757575;
+$accent-text:#212121;
+$my-color:#ffffff;
+$accent-color: #2196F3;
+
+/* чем мы занимаемся */
+
+.subtitle{
+    flex-direction: column;
+    width: 380px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+    text-align: center;  }
+.bowl{      
+    padding-bottom: 94px;     }
+.wrapper{      
+    display: flex;
+    justify-content: space-between;         }
+.thumb{
+    padding-left: 0;  }  
+
+.label{
+    @include fonts(700);
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $my-color;     }
+.label{
+    position: absolute;
+    width: 205px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   }
+.thumb-desktop{
+    position: absolute;
+    width: 370px;
+    height: 70px;
+    bottom: 4px;
+    background: rgba(47, 48, 58, 0.8);    }
+.wrapper{
+    position: relative;       }   

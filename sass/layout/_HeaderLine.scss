@@ -1,0 +1,130 @@
+/*Верхняя линия*/
+@mixin flexCenter($type){
+    display: $type;
+    align-items: center;
+    justify-content: center;
+}
+@mixin fonts ($type){
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: $type;  }
+@mixin transform {
+        transition-property: background-color,fill, border-color;
+        transition-duration: 250ms;
+        transition-timing-function: linear;
+
+     }    
+@mixin transformSocial {
+    transition-property: background-color,fill ;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+}    
+$ghost-color: #EEEEEE;
+$accent-link:#AFB1B8;
+$my-accent:#F5F4FA;
+$back-color: #2F303A;
+$text-color: #757575;
+$accent-text:#212121;
+$my-color:#ffffff;
+$accent-color: #2196F3;
+header{
+    background-color: $my-color; }
+.header-logo {
+    &:focus{
+        outline: none;
+       }
+    
+    } 
+.header-logo,
+.logo-footer{
+    @include flexCenter(flex);
+    font-family: Raleway,sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 30.52px;      }
+    
+.link{
+        color:$accent-text;
+       &:hover{ outline: none;
+           color: $accent-color;}
+       &:focus{
+         outline: none;
+        border-color: $my-color;
+        color: $accent-color;
+   } 
+}
+     
+.menu-nav{
+    @include fonts(500);
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;    }
+
+
+.link.header-logo
+
+.contacts.widget
+
+.aside.logo-footer
+{
+  cursor: pointer;  }
+
+.header{
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    width: 100%;
+    height: 80px ;
+    margin-right: auto;
+    margin-left: auto;
+    border-bottom:  1px solid #ECECEC;;
+    @include flexCenter(flex);      }        
+.header>.container{
+    display: flex;  } 
+.header-logo{
+    margin-right: 53px; }
+.navigation{
+    padding-right: unset; }
+.menu-nav{
+    @include flexCenter(flex); }
+.navigation{
+    display: flex;  }
+.menu-nav-contacts{   
+    display: flex;
+
+    margin-left: auto;
+    margin-right: -50px;  }
+.contacts:last-child{
+    margin-right: 50px;  }
+
+.contacts{
+    fill:$text-color;         }
+.link-mailto ,.link-tel{      
+    margin-right: 10px;     }
+.menu-nav-contacts .contacts,
+.menu-nav-contacts .contacts{
+   &:hover,
+   &:focus{outline: none;
+    color: $accent-color;}
+               }         
+.email ,.phone{
+    display: flex;     }      
+
+
+/*контакты*/
+
+.contacts{
+    @include flexCenter(flex);
+    font-family: Roboto;
+    font-style: normal;
+    line-height: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: $text-color;      
+&:hover,
+&:focus{outline: none;
+    color: $accent-color;
+    fill: $accent-color;
+   } 
+}

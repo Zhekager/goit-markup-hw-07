@@ -1,0 +1,39 @@
+$ghost-color: #EEEEEE;
+$accent-link:#AFB1B8;
+$my-accent:#F5F4FA;
+$back-color: #2F303A;
+$text-color: #757575;
+$accent-text:#212121;
+$my-color:#ffffff;
+$accent-color: #2196F3;
+
+/*шапка*/
+
+.banner  {      
+    background: $back-color;  }      
+.heading{      
+   @include fonts(900);
+    font-size: 44px;
+    line-height: 60px;
+    color:$my-color;
+    letter-spacing: 0.06em;    }
+
+
+.helmet{ 
+    background: linear-gradient(
+           to right, rgba(47, 48, 58, 0.4), 
+           rgba(47, 48, 58, 0.4)),
+            url(../svg/Imgmin.jpg);
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover; 
+    padding-top: 200px;
+    padding-bottom: 200px;    }
+.heading{
+
+    width: 616px;
+    height: auto;
+    margin: 0px auto;
+    padding-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;        }

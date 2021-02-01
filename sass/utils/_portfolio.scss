@@ -1,0 +1,127 @@
+@mixin flexCenter($type){
+    display: $type;
+    align-items: center;
+    justify-content: center;   
+}
+@mixin transform {
+   transition-property: background-color,fill, border-color;
+   transition-duration: 250ms;
+   transition-timing-function: linear;
+}
+@mixin fonts ($type){
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: $type;
+  
+}
+@mixin transformSocial {
+   transition-property: background-color,fill ;
+   transition-duration: 250ms;
+   transition-timing-function: linear;
+}
+$ghost-color: #EEEEEE;
+$accent-link:#AFB1B8;
+$my-accent:#F5F4FA;
+$back-color: #2F303A;
+$text-color: #757575;
+$accent-text:#212121;
+$my-color:#ffffff;
+$accent-color: #2196F3;
+
+/*портфолио*/
+.coloring{
+    padding-bottom: 79px;
+    padding-top: 94px;  }
+
+
+.spreadsheet{ 
+    width: 1200px;
+    height: 1300px;
+    display: flex;
+    flex-wrap: wrap;     }
+.ticket{ 
+    width: auto;
+    height: 404px;        }
+.internal-block{     
+    padding:20px 24px;  } 
+       
+
+
+
+
+.title{
+    @include fonts(700);
+    font-size: 18px;
+    line-height: 36px;
+    letter-spacing: 0.06em;
+    color:$accent-text;  }
+.desc{
+    @include fonts(400);
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+    color: $text-color;  }
+
+    /* Активная ссылка */
+
+.stirring{
+    margin-right: 50px;      }
+.link{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition:color  250ms linear;}
+.link{
+    position: relative;    }
+.link::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -0.5px;
+    left: 0px;
+    width: 100%;
+    height: 4px;
+    background: $accent-color;
+    border-radius: 2px;
+    opacity: 0; 
+    transition: opacity 250ms linear;  }
+.current-link,
+.current-link.link::after,
+.link:hover:after,
+.current-link,
+.current-link.link::after,
+.link:focus:after{
+    color:$accent-color;
+    opacity: 1;  }  
+    
+    
+/* портфолио технокряк */
+.photo{
+    position: relative;
+    overflow: hidden;   }
+.photo .animation-technocryk{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+    transition: transform 250ms linear;     }
+.animation-technocryk{
+    padding: 63px 24px;      }
+.technocryk{
+    @include fonts(400);
+    font-size: 18px;
+    line-height: 28px; 
+    letter-spacing: 0.03em;
+    color: $my-color;    }
+
+.contacts{
+    transition-property: background-color,color ;
+    transition-duration: 250ms;
+    transition-timing-function: linear; }
+.instagram,.twitter,.facebook,.linkedin{
+    @include transform;       }
+.link-client,.instagram-connexion,.twitter-connexion,
+.facebook-connexion,.linkedin-connexion,.link-mailto,.link-tel{
+   @include transform;       }  
